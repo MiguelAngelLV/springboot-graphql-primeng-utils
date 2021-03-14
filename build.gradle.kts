@@ -2,8 +2,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
 
-    id("org.springframework.boot") version "2.4.3"
-    id("io.spring.dependency-management") version "1.0.11.RELEASE"
 
     kotlin("jvm") version "1.4.31"
     kotlin("plugin.spring") version "1.4.31"
@@ -33,9 +31,8 @@ dependencies {
 
 
     //Spring
-    developmentOnly("org.springframework.boot:spring-boot-devtools")
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-web:2.4.3")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.4.3")
 
 
     //QueryDSL
