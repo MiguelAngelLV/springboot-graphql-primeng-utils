@@ -33,6 +33,7 @@ dependencies {
     //Spring
     implementation("org.springframework.boot:spring-boot-starter-web:2.4.3")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.4.3")
+    implementation("org.testng:testng:7.1.0")
 
 
     //QueryDSL
