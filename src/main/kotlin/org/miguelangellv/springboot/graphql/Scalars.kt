@@ -7,11 +7,9 @@ import org.springframework.stereotype.Component
 import java.text.SimpleDateFormat
 import java.util.*
 
-@Component
-public class Scalars {
+public object Scalars {
 
 
-    @Bean
     public fun getDate(): GraphQLScalarType {
 
         val coercing = object : Coercing<Date, String> {
@@ -53,14 +51,11 @@ public class Scalars {
             .description("An RFC-3339 compliant Full Date Scalar")
             .coercing(coercing)
             .build()
-        
-    }
-
-
-
-    private companion object {
-        private val dateFormatter = SimpleDateFormat("yyyy-MM-dd")
 
     }
+
+
+    private val dateFormatter = SimpleDateFormat("yyyy-MM-dd")
+
 
 }
