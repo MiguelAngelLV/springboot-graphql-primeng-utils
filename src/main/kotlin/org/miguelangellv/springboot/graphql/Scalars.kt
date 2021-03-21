@@ -18,6 +18,12 @@ public object Scalars {
                 if (input is Date)
                     return dateFormatter.format(input)
 
+                if (input is Long)
+                    return dateFormatter.format(Date(input))
+
+                if (input is String)
+                    return input
+
                 throw CoercingSerializeException("Get $input")
             }
 
@@ -28,7 +34,10 @@ public object Scalars {
                     return input
 
                 if (input is String)
-                    dateFormatter.parse(input)
+                    return dateFormatter.parse(input)
+
+                if (input is Long)
+                    return Date(input)
 
 
                 throw CoercingParseValueException("Get $input")
