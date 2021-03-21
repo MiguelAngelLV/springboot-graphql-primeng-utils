@@ -37,6 +37,11 @@ dependencies {
     implementation("org.testng:testng:7.1.0")
 
 
+    //Graphql
+    val graphqlVersion = "11.0.0"
+    implementation("com.graphql-java-kickstart", "graphql-spring-boot-starter", graphqlVersion)
+
+
     //QueryDSL
     val queryDslVersion = "4.3.1"
     implementation ("com.querydsl", "querydsl-apt", queryDslVersion)
